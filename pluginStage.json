@@ -1,0 +1,31 @@
+{
+    "slug": "stage",
+    "pluginId": 173,
+    "buildId": 192,
+    "entryPoints": {
+        "adminPages": [
+            "general"
+        ],
+        "blocks": []
+    },
+    "buildIncludes": [
+        "stage.php",
+        "readme.txt",
+        "php",
+        "vendor",
+        "build",
+        "admin/general/init.php"
+    ],
+    "buildSteps": {
+        "dev": [
+            "composer install",
+            "yarn",
+            "yarn start"
+        ],
+        "prod": [
+            "composer install --no-dev",
+            "yarn",
+            "yarn build"
+        ]
+    }
+}
